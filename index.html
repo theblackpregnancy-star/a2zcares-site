@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://a2zcares.co.uk/">
+<meta name="theme-color" content="#FFD23F">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A2Z Cares">
+<meta property="og:title" content="A2Z Cares: coming soon to North Yorkshire">
+<meta property="og:description" content="Find and book trusted local carers in minutes. Register your interest today.">
+<meta property="og:url" content="https://a2zcares.co.uk/">
+<meta property="og:image" content="https://a2zcares.co.uk/img/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<title>A2Z Cares</title>
+<meta name="description" content="A2Z Cares is coming soon to North Yorkshire. Find and book trusted local carers in minutes. Register your interest today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible+Next:wght@200..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: road-atlas index. The logo's yellow tab shape (one big rounded corner) frames every
+   picture; illustrations carry the warmth, type carries the confidence. */
+:root {
+  --paper: #F4F3EF;
+  --surface: #FFFFFF;
+  --ink: #0F1229;
+  --muted: #555A74;
+  --line: #DCDCE3;
+  --cobalt: #2840D8;
+  --on-cobalt: #FFFFFF;
+  --tint: #E5E8FB;
+  --yellow: #FFD23F;
+  --yellow-soft: #FFF3C4;
+  --on-yellow: #0F1229;
+  --go: #0E7C52;
+  --danger: #B42318;
+  --band: #0F1229;
+  --on-band: #F4F3EF;
+  --band-muted: #AEB2CC;
+
+  --map-land: #E8E7E1;
+  --map-street: #FFFFFF;
+  --map-park: #CFE3C8;
+  --map-water: #BCD0F4;
+  --map-road: #FFD23F;
+  --map-road-edge: #E3B51E;
+  --map-label: #6A6E86;
+
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-3: clamp(1.9rem, 3.4vw, 2.75rem);
+  --step-4: clamp(2.6rem, 5.4vw, 4.6rem);
+
+  --tab: 22px 22px 22px 64px;
+  --radius: 16px;
+  --shadow: 0 1px 2px rgba(15,18,41,.06), 0 14px 34px -10px rgba(15,18,41,.22);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0D0F1D; --surface: #161A31; --ink: #EEEFF6; --muted: #A3A7C0; --line: #2A2F4C;
+    --cobalt: #8C9BFF; --on-cobalt: #0D0F1D; --tint: #1F2550; --yellow: #FFD23F; --yellow-soft: #2E2A16; --on-yellow: #0F1229;
+    --go: #4CC793; --danger: #FF8A80; --band: #161A31; --on-band: #EEEFF6; --band-muted: #A3A7C0;
+    --map-land: #171A2F; --map-street: #242844; --map-park: #1A3A2C; --map-water: #1A2C5E;
+    --map-road: #D9B13A; --map-road-edge: #7D6517; --map-label: #8A8FAE;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 18px 40px -12px rgba(0,0,0,.65);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0D0F1D; --surface: #161A31; --ink: #EEEFF6; --muted: #A3A7C0; --line: #2A2F4C;
+  --cobalt: #8C9BFF; --on-cobalt: #0D0F1D; --tint: #1F2550; --yellow: #FFD23F; --yellow-soft: #2E2A16; --on-yellow: #0F1229;
+  --go: #4CC793; --danger: #FF8A80; --band: #161A31; --on-band: #EEEFF6; --band-muted: #A3A7C0;
+  --map-land: #171A2F; --map-street: #242844; --map-park: #1A3A2C; --map-water: #1A2C5E;
+  --map-road: #D9B13A; --map-road-edge: #7D6517; --map-label: #8A8FAE;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 18px 40px -12px rgba(0,0,0,.65);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 30; background: var(--paper);
+}
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; color: var(--ink); }
+p { margin: 0; }
+a { color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 2px; border-radius: 6px; }
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 700px) {
+  .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); }
+}
+
+.eyebrow {
+  font-family: var(--mono); font-size: var(--step--1); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 50px; padding: 0 1.3rem; border-radius: 12px; border: 1.5px solid transparent;
+  font-weight: 700; text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: transform .12s ease, filter .15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--cobalt); color: var(--on-cobalt); }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn-ghost:hover { border-color: var(--ink); }
+.btn-yellow { background: var(--yellow); color: var(--on-yellow); }
+.btn-yellow:hover { filter: brightness(1.04); }
+.btn-block { width: 100%; }
+
+/* Logo */
+.logo { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink); }
+.logo-mark { width: 40px; height: 40px; flex: none; }
+.logo-word { display: flex; flex-direction: column; line-height: .86; }
+.logo-a2z { font-family: var(--display); font-weight: 900; font-stretch: 125%; font-size: 1.42rem; letter-spacing: -.03em; }
+.logo-a2z b { color: var(--cobalt); font-weight: 900; }
+.logo-cares { font-family: var(--display); font-weight: 600; font-size: .6rem; letter-spacing: .34em; text-transform: uppercase; margin-top: .28rem; padding-left: 1px; }
+
+/* Header */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 70px; }
+.nav-links { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; }
+.nav-links a:hover { color: var(--ink); }
+.nav .btn { min-height: 44px; padding: 0 1.05rem; }
+@media (max-width: 960px) { .nav-links { display: none; } }
+
+/* Hero */
+.hero { padding-block: clamp(1.75rem, 4.5vw, 3.75rem) clamp(3rem, 7vw, 5.5rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(1.75rem, 4vw, 3.5rem); align-items: stretch; }
+.hero-copy { display: flex; flex-direction: column; gap: 1.4rem; }
+.soon {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: .55rem;
+  padding: .4rem .85rem .4rem .5rem; border-radius: 999px; background: var(--yellow-soft); color: var(--ink);
+  font-weight: 700; font-size: .92rem;
+}
+.soon svg { flex: none; }
+.hero h1 {
+  font-size: var(--step-4); font-weight: 850; font-stretch: 118%; line-height: .98; letter-spacing: -.025em;
+  position: relative; z-index: 0; isolation: isolate;
+}
+.hero h1 mark { background: none; color: inherit; position: relative; white-space: nowrap; }
+.hero h1 mark::after {
+  content: ""; position: absolute; left: -.04em; right: -.04em; bottom: .04em; height: .24em;
+  background: var(--yellow); z-index: -1; border-radius: 2px;
+}
+.lede { font-size: var(--step-1); line-height: 1.5; color: var(--muted); max-width: 40ch; }
+.lede strong { color: var(--ink); }
+
+.hero-art { position: relative; min-height: 420px; }
+.hero-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 80% 50%; border-radius: var(--tab); box-shadow: var(--shadow); }
+.art-tag {
+  position: absolute; right: 18px; bottom: 18px; z-index: 1;
+  display: inline-flex; align-items: center; gap: .5rem; padding: .55rem .8rem;
+  background: var(--surface); color: var(--ink); border-radius: 12px; box-shadow: var(--shadow);
+  font-size: .85rem; font-weight: 700;
+}
+.art-tag span { font-family: var(--mono); font-weight: 400; color: var(--muted); font-size: .75rem; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  .hero-copy { display: contents; }
+  .soon { justify-self: start; }
+  .hero-art { min-height: 0; aspect-ratio: 3 / 2; max-width: 100%; order: 1; }
+  .register { order: 2; }
+}
+@media (max-width: 520px) { .art-tag { display: none; } }
+
+/* Register form */
+.register {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 1.15rem; display: grid; gap: .85rem; scroll-margin-top: 96px;
+}
+.register h2 { font-size: 1.15rem; font-weight: 800; font-stretch: 110%; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border-radius: 12px; background: var(--paper); border: 1.5px solid var(--line); }
+.seg button { min-height: 40px; border: 0; border-radius: 9px; background: transparent; cursor: pointer; font-weight: 700; font-size: .92rem; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(15,18,41,.16); }
+.reg-row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: .6rem; }
+@media (max-width: 520px) { .reg-row { grid-template-columns: 1fr; } }
+.field { display: grid; gap: .4rem; }
+.field > label, .field > .label { font-weight: 700; font-size: .92rem; }
+.input {
+  width: 100%; min-height: 50px; padding: 0 .9rem; border-radius: 10px;
+  border: 1.5px solid var(--line); background: var(--paper);
+}
+.input:focus { outline: none; border-color: var(--cobalt); box-shadow: 0 0 0 3px var(--tint); }
+.input-pc { font-family: var(--mono); text-transform: uppercase; letter-spacing: .04em; }
+.fine { font-size: .82rem; color: var(--muted); }
+.err { color: var(--danger); font-size: .9rem; font-weight: 700; }
+.reg-done { display: grid; gap: .5rem; padding: .25rem 0; }
+.reg-done b { font-family: var(--display); font-size: 1.3rem; font-weight: 850; font-stretch: 112%; }
+
+/* Section frame */
+section.block { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+section.tight { padding-top: 0; }
+.section-head { display: grid; gap: .9rem; max-width: 62ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.section-head h2 { font-size: var(--step-3); font-weight: 850; font-stretch: 115%; line-height: 1.02; letter-spacing: -.02em; }
+.section-head p { color: var(--muted); font-size: var(--step-1); line-height: 1.5; }
+
+/* Preview stage: map + booking card */
+.stage {
+  position: relative; border-radius: var(--tab); overflow: hidden; min-height: 600px;
+  border: 1px solid var(--line); background: var(--map-land);
+  display: flex; align-items: flex-start;
+}
+.map { position: absolute; inset: 0; }
+.map canvas { display: block; width: 100%; height: 100%; }
+.map-caption {
+  position: absolute; right: 14px; top: 12px; z-index: 2;
+  font-family: var(--mono); font-size: .72rem; color: var(--map-label); letter-spacing: .04em;
+  background: color-mix(in srgb, var(--map-land) 85%, transparent); padding: 2px 6px; border-radius: 4px;
+}
+.pin {
+  --x: 50%; --y: 50%;
+  position: absolute; left: var(--x); top: var(--y); z-index: 3;
+  transform: translate(-50%, calc(-100% - 10px));
+  display: grid; place-items: center;
+  width: 44px; height: 44px; padding: 0; border-radius: 50%;
+  background: var(--surface); border: 2px solid var(--ink); color: var(--ink);
+  cursor: pointer; box-shadow: var(--shadow);
+  transition: background-color .2s ease, transform .2s ease;
+}
+.pin::after {
+  content: ""; position: absolute; left: 50%; bottom: -8px; width: 12px; height: 12px;
+  background: inherit; border-right: 2px solid; border-bottom: 2px solid; border-color: inherit;
+  transform: translateX(-50%) rotate(45deg);
+}
+.pin span { position: relative; z-index: 1; font-family: var(--display); font-weight: 800; font-stretch: 110%; font-size: .82rem; }
+.pin:hover { transform: translate(-50%, calc(-100% - 10px)) scale(1.06); }
+.pin[aria-pressed="true"] { background: var(--yellow); color: var(--on-yellow); border-color: var(--on-yellow); z-index: 4; }
+.pin.drop { animation: drop .5s cubic-bezier(.2,.9,.3,1.3) both; animation-delay: calc(var(--d, 0) * 90ms); }
+@keyframes drop { from { transform: translate(-50%, -190%); opacity: 0; } to { transform: translate(-50%, calc(-100% - 10px)); opacity: 1; } }
+.dot { position: absolute; left: var(--x); top: var(--y); width: 10px; height: 10px; border-radius: 50%; background: var(--muted); opacity: .45; translate: -50% -50%; z-index: 2; }
+.you { position: absolute; left: var(--x); top: var(--y); translate: -50% -50%; z-index: 2; width: 22px; height: 22px; }
+.you::before, .you::after { content: ""; position: absolute; inset: 0; border-radius: 50%; }
+.you::before { background: var(--cobalt); border: 3px solid var(--surface); box-shadow: 0 0 0 1px var(--cobalt); }
+.you::after { inset: -14px; border: 2px solid var(--cobalt); opacity: 0; animation: ping 2.4s ease-out infinite; }
+@keyframes ping { 0% { transform: scale(.4); opacity: .8; } 100% { transform: scale(1.4); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .you::after { animation: none; } .pin.drop { animation: none; } }
+
+.card {
+  position: relative; z-index: 4; margin: 20px; width: min(384px, calc(100% - 40px));
+  background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid var(--line); scroll-margin-top: 96px;
+}
+.card-head { padding: 1.1rem 1.25rem .9rem; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.card-head h3 { font-size: 1.2rem; font-weight: 800; font-stretch: 110%; }
+.pill { font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; padding: .15rem .45rem; border-radius: 6px; background: var(--yellow-soft); color: var(--ink); }
+.card-body { padding: 1.1rem 1.25rem 1.25rem; display: grid; gap: 1.05rem; }
+.input-wrap { position: relative; }
+.input-wrap svg { position: absolute; left: .85rem; top: 50%; translate: 0 -50%; color: var(--muted); pointer-events: none; }
+.input-wrap .input { padding-left: 2.4rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: .35rem; min-height: 38px; padding: 0 .8rem;
+  border-radius: 8px; border: 1.5px solid var(--line); background: var(--surface); cursor: pointer;
+  font-size: .92rem; font-weight: 500;
+}
+.chip:hover { border-color: var(--muted); }
+.chip svg { display: none; }
+.chip[aria-pressed="true"] { background: var(--tint); border-color: var(--cobalt); font-weight: 700; }
+.chip[aria-pressed="true"] svg { display: block; color: var(--cobalt); }
+.when-row { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.hours { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.stepper { display: inline-flex; align-items: center; border: 1.5px solid var(--line); border-radius: 10px; overflow: hidden; }
+.stepper button { width: 44px; height: 44px; border: 0; background: var(--paper); cursor: pointer; font-size: 1.25rem; font-weight: 700; }
+.stepper output { min-width: 70px; text-align: center; font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; }
+.demo-note { font-size: .8rem; color: var(--muted); text-align: center; }
+.results-meta { font-family: var(--mono); font-size: .8rem; color: var(--muted); letter-spacing: .02em; }
+.carers { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.carer {
+  width: 100%; text-align: left; display: grid; grid-template-columns: 44px minmax(0,1fr) auto; gap: .75rem; align-items: center;
+  padding: .7rem .75rem; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); cursor: pointer;
+}
+.carer:hover { border-color: var(--muted); }
+.carer[aria-pressed="true"] { border-color: var(--cobalt); background: var(--tint); }
+.avatar {
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  font-family: var(--display); font-weight: 800; font-stretch: 110%; font-size: .9rem;
+  background: var(--yellow); color: var(--on-yellow);
+}
+.carer-name { font-weight: 700; display: flex; gap: .4rem; align-items: baseline; flex-wrap: wrap; }
+.stars { font-family: var(--mono); font-size: .78rem; color: var(--muted); font-weight: 400; }
+.carer-tag { display: block; font-size: .85rem; color: var(--muted); line-height: 1.35; margin-top: .1rem; }
+.carer-eta { display: block; font-size: .82rem; font-weight: 700; color: var(--go); margin-top: .2rem; }
+.carer-rate { text-align: right; font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.carer-rate small { display: block; color: var(--muted); font-size: .72rem; }
+.link-btn { background: none; border: 0; padding: 0; color: var(--cobalt); font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; justify-self: start; }
+.done-mark { width: 56px; height: 56px; border-radius: 50%; background: var(--go); color: var(--surface); display: grid; place-items: center; }
+.done h4 { margin: 0; font-family: var(--display); font-size: 1.45rem; font-weight: 850; font-stretch: 112%; line-height: 1.1; }
+.summary { margin: 0; display: grid; grid-template-columns: auto minmax(0,1fr); gap: .45rem 1rem; padding: .9rem 1rem; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); }
+.summary dt { color: var(--muted); font-size: .9rem; }
+.summary dd { margin: 0; font-weight: 700; text-align: right; }
+
+@media (max-width: 900px) {
+  .stage { display: block; min-height: 0; overflow: visible; border: 0; background: none; border-radius: 0; }
+  .map { position: relative; height: 260px; border-radius: 22px 22px 22px 48px; overflow: hidden; border: 1px solid var(--line); }
+  .card { margin: -48px auto 0; width: min(560px, calc(100% - 16px)); }
+  .pin { left: var(--mx, var(--x)); top: var(--my, var(--y)); width: 40px; height: 40px; }
+  .dot, .you { left: var(--mx, var(--x)); top: var(--my, var(--y)); }
+  .map-caption { display: none; }
+}
+
+/* A–Z services index */
+.az { border-top: 2px solid var(--ink); }
+.az-list { list-style: none; margin: 0; padding: 0; columns: 3 280px; column-gap: 2.5rem; }
+.az-item { break-inside: avoid; border-bottom: 1px solid var(--line); }
+.az-btn {
+  width: 100%; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: .9rem; align-items: start;
+  padding: .95rem .25rem; background: none; border: 0; text-align: left; cursor: pointer; border-radius: 8px;
+}
+.az-letter {
+  display: grid; place-items: center; width: 48px; height: 48px; border-radius: 6px 6px 6px 16px;
+  font-family: var(--display); font-weight: 900; font-stretch: 125%; font-size: 1.6rem; line-height: 1;
+  border: 1.5px solid var(--line); color: var(--ink);
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.az-name { font-weight: 700; display: block; }
+.az-desc { display: block; color: var(--muted); font-size: .92rem; line-height: 1.4; margin-top: .1rem; }
+.az-add { display: inline-block; margin-top: .3rem; font-size: .82rem; font-weight: 700; color: var(--cobalt); opacity: 0; transition: opacity .15s ease; }
+.az-btn:hover .az-letter, .az-btn:focus-visible .az-letter, .az-btn.added .az-letter { background: var(--yellow); border-color: var(--yellow); color: var(--on-yellow); }
+.az-btn:hover .az-add, .az-btn:focus-visible .az-add { opacity: 1; }
+.az-btn.added .az-add { opacity: 1; color: var(--go); }
+@media (hover: none) { .az-add { opacity: 1; } }
+
+/* North Yorkshire */
+.ny-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.ny-art img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--tab); box-shadow: var(--shadow); }
+.ny-copy { display: grid; gap: 1.25rem; }
+.ny-copy p { color: var(--muted); font-size: var(--step-1); line-height: 1.5; max-width: 52ch; }
+.towns { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: .25rem 0 0; }
+.towns li { display: inline-flex; align-items: center; gap: .45rem; padding: .3rem .65rem .3rem .3rem; border: 1.5px solid var(--line); border-radius: 8px; background: var(--surface); font-weight: 700; font-size: .92rem; }
+.towns b { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 4px 4px 4px 9px; background: var(--yellow); color: var(--on-yellow); font-family: var(--display); font-weight: 900; font-stretch: 125%; font-size: .8rem; }
+.towns-note { font-size: .9rem; color: var(--muted); }
+@media (max-width: 900px) { .ny-grid { grid-template-columns: 1fr; } .ny-art { max-width: 460px; } }
+
+/* How it will work */
+.how-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; }
+.steps li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 1rem; padding-block: 1.5rem; border-top: 1px solid var(--line); }
+.steps li:last-child { border-bottom: 1px solid var(--line); }
+.step-n { font-family: var(--display); font-weight: 900; font-stretch: 125%; font-size: 2.2rem; line-height: 1; color: var(--cobalt); }
+.steps h3 { font-size: 1.35rem; font-weight: 800; font-stretch: 110%; margin-bottom: .35rem; }
+.steps p { color: var(--muted); max-width: 52ch; }
+@media (max-width: 900px) { .how-grid { grid-template-columns: 1fr; } }
+.notes { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.notes-head { padding: 1rem 1.2rem; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.notes-head strong { font-family: var(--display); font-stretch: 110%; font-weight: 800; }
+.timeline { list-style: none; margin: 0; padding: 1rem 1.2rem 1.2rem; display: grid; }
+.timeline li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: .8rem; padding-bottom: 1rem; }
+.timeline li:last-child { padding-bottom: 0; }
+.timeline time { font-family: var(--mono); font-size: .8rem; color: var(--muted); padding-top: .15rem; font-variant-numeric: tabular-nums; }
+.timeline .t-body { border-left: 2px solid var(--line); padding-left: .9rem; margin-left: -.2rem; }
+.timeline li:first-child .t-body, .timeline li:last-child .t-body { border-left-color: var(--yellow); }
+.timeline .note { margin-top: .4rem; padding: .6rem .75rem; border-radius: 10px; background: var(--paper); font-size: .95rem; }
+.notes-foot { padding: .85rem 1.2rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.faces { display: inline-flex; }
+.faces span { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: .7rem; font-weight: 700; border: 2px solid var(--surface); margin-left: -6px; background: var(--tint); color: var(--ink); }
+.faces span:first-child { margin-left: 0; }
+
+/* Safety */
+.trust-grid { display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+@media (max-width: 900px) { .trust-grid { grid-template-columns: 1fr; } .trust-grid .passport { order: 2; } }
+.passport { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); overflow: hidden; }
+.passport-top { display: flex; gap: 1rem; align-items: center; padding: 1.2rem; background: var(--yellow); color: var(--on-yellow); }
+.passport-top .avatar { width: 56px; height: 56px; font-size: 1.1rem; background: var(--on-yellow); color: var(--yellow); }
+.passport-top b { display: block; font-family: var(--display); font-weight: 850; font-stretch: 112%; font-size: 1.25rem; line-height: 1.1; }
+.passport-top small { font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+.passport dl { margin: 0; padding: .4rem 1.2rem 1rem; }
+.passport dl div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding-block: .7rem; border-bottom: 1px dashed var(--line); }
+.passport dl div:last-child { border-bottom: 0; }
+.passport dt { color: var(--muted); }
+.passport dd { margin: 0; font-weight: 700; text-align: right; display: inline-flex; gap: .4rem; align-items: center; justify-content: flex-end; }
+.passport dd svg { color: var(--go); flex: none; }
+.passport dd small { display: block; font-family: var(--mono); font-weight: 400; font-size: .75rem; color: var(--muted); }
+.check-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: .9rem; }
+.check-list li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: .6rem; }
+.check-list svg { color: var(--go); margin-top: .2rem; }
+.check-list b { display: block; }
+.check-list span { color: var(--muted); }
+.cqc { margin-top: 1.5rem; padding: 1rem 1.1rem; border-radius: 12px; background: var(--yellow-soft); font-size: .95rem; }
+.cqc b { display: block; margin-bottom: .2rem; }
+
+/* Carers band */
+.band { background: var(--band); color: var(--on-band); }
+.band .wrap { padding-block: clamp(3.5rem, 8vw, 6rem); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 2.5rem 4rem; align-items: center; }
+.band h2 { color: var(--on-band); font-size: var(--step-3); font-weight: 850; font-stretch: 115%; line-height: 1.02; letter-spacing: -.02em; }
+.band p { color: var(--band-muted); font-size: var(--step-1); margin-top: 1rem; max-width: 46ch; }
+.band .eyebrow { color: var(--yellow); margin-bottom: .9rem; display: block; }
+.band ul { list-style: none; padding: 0; margin: 1.5rem 0 1.75rem; display: grid; }
+.band li { padding-block: .8rem; border-bottom: 1px solid color-mix(in srgb, var(--on-band) 18%, transparent); font-weight: 700; display: flex; gap: .7rem; align-items: center; }
+.band li svg { color: var(--yellow); flex: none; }
+.band-art img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--tab); }
+@media (max-width: 900px) { .band .wrap { grid-template-columns: 1fr; } .band-art { order: -1; } }
+
+/* FAQ */
+.faq { max-width: 800px; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 1.2rem 0; font-weight: 700; font-size: var(--step-1); display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--display); font-weight: 800; font-size: 1.5rem; line-height: 1; color: var(--cobalt); flex: none; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding-bottom: 1.3rem; color: var(--muted); max-width: 62ch; }
+
+/* Closing call to action */
+.closer { background: var(--yellow); color: var(--on-yellow); }
+.closer .wrap { padding-block: clamp(3rem, 7vw, 5rem); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.closer h2 { color: var(--on-yellow); font-size: var(--step-3); font-weight: 850; font-stretch: 115%; line-height: 1.02; letter-spacing: -.02em; max-width: 18ch; }
+.closer .btn { background: var(--on-yellow); color: #FFD23F; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 2.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; align-items: center; }
+footer nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+footer nav a { color: var(--muted); text-decoration: none; font-size: .95rem; }
+footer nav a:hover { color: var(--ink); }
+footer small { color: var(--muted); font-size: .85rem; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="A2Z Cares home">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 0H54A10 10 0 0 1 64 10V54A10 10 0 0 1 54 64H22A22 22 0 0 1 0 42V10A10 10 0 0 1 10 0Z" fill="#FFD23F"/><path d="M19.5 24.5C19.5 16.5 25.6 11 33 11C40.4 11 45.5 16 45.5 22.6C45.5 28.4 42.4 31.6 37.6 35.4L21 49.5H40.5" fill="none" stroke="#0F1229" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19.5" cy="24.5" r="4.6" fill="#FFD23F" stroke="#0F1229" stroke-width="3.2"/><circle cx="44.5" cy="49.5" r="6.2" fill="#2840D8"/><circle cx="44.5" cy="49.5" r="2.2" fill="#FFFFFF"/></svg>
+      <span class="logo-word"><span class="logo-a2z">A<b>2</b>Z</span><span class="logo-cares">Cares</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#preview">How it will work</a></li>
+      <li><a href="#az">Services</a></li>
+      <li><a href="#yorkshire">North Yorkshire</a></li>
+      <li><a href="#carers">For carers</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#register">Register interest</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="soon">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s-7-6.4-7-12a7 7 0 0 1 14 0c0 5.6-7 12-7 12z" fill="#FFD23F" stroke="#0F1229" stroke-width="1.6"/><circle cx="12" cy="10" r="2.6" fill="#0F1229"/></svg>
+          Coming soon to North Yorkshire
+        </span>
+        <h1>Care at your door, booked in <mark>minutes</mark>.</h1>
+        <p class="lede">A2Z Cares is a new way to find and book trusted local carers. See who's free near you, choose the person you like, and follow every visit from your phone. We're starting in <strong>North Yorkshire</strong>.</p>
+
+        <form class="register" id="register" novalidate>
+          <h2 id="regTitle">Be first to know when we launch</h2>
+          <div id="regFields" style="display:grid;gap:.85rem">
+            <div class="seg" role="group" aria-label="I am">
+              <button type="button" id="roleCare" aria-pressed="true">I'm looking for care</button>
+              <button type="button" id="roleCarer" aria-pressed="false">I'm a carer</button>
+            </div>
+            <div class="reg-row">
+              <div class="field">
+                <label for="regEmail">Email</label>
+                <input class="input" id="regEmail" type="email" autocomplete="email" placeholder="you@example.com" required>
+              </div>
+              <div class="field">
+                <label for="regArea">Town or postcode</label>
+                <input class="input" id="regArea" autocomplete="address-level2" placeholder="e.g. Malton" required>
+              </div>
+            </div>
+            <span class="err" id="regErr" hidden></span>
+            <button class="btn btn-primary btn-block" type="submit" id="regBtn">Register interest</button>
+            <p class="fine">We'll only use your details to tell you about our launch. You can unsubscribe at any time.</p>
+          </div>
+          <div class="reg-done" id="regDone" hidden aria-live="polite">
+            <b id="regDoneTitle">You're on the list</b>
+            <p id="regDoneText" style="color:var(--muted)"></p>
+          </div>
+        </form>
+      </div>
+
+      <figure class="hero-art" style="margin:0">
+        <img src="img/hero-cottage.webp" width="1600" height="1067" alt="Illustration of a carer arriving at a stone cottage in a Yorkshire Dales village, greeted at the yellow front door by an older woman." fetchpriority="high">
+        <figcaption class="art-tag">From the Dales to the coast <span>N. YORKS</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block tight" id="preview">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it will work</span>
+        <h2>Booking a carer will feel as easy as booking a taxi</h2>
+        <p>Here's a preview of the A2Z Cares app. Pick the help you need and see who could come and when.</p>
+      </div>
+
+      <div class="stage">
+        <div class="map">
+          <canvas id="map" aria-label="Map of example carers near you" role="img"></canvas>
+          <span class="you" style="--x:68%;--y:50%;--mx:50%;--my:52%" title="You"></span>
+          <span class="dot" style="--x:92%;--y:52%;--mx:90%;--my:48%"></span>
+          <span class="dot" style="--x:50%;--y:46%;--mx:10%;--my:46%"></span>
+          <span class="dot" style="--x:72%;--y:88%;--mx:52%;--my:90%"></span>
+          <span class="dot" style="--x:94%;--y:14%;--mx:60%;--my:12%"></span>
+          <div id="pins"></div>
+          <span class="map-caption">EXAMPLE CARERS NEAR YOU</span>
+        </div>
+
+        <div class="card" id="book" aria-live="polite">
+          <form id="viewForm" novalidate>
+            <div class="card-head">
+              <h3>Book a carer</h3>
+              <span class="pill">Preview</span>
+            </div>
+            <div class="card-body">
+              <div class="field">
+                <label for="postcode">Where is the care needed?</label>
+                <div class="input-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>
+                  <input class="input input-pc" id="postcode" name="postcode" autocomplete="off" placeholder="Postcode, e.g. YO62" value="YO62" maxlength="8" aria-describedby="pcErr">
+                </div>
+                <span class="err" id="pcErr" hidden>Enter a postcode, like YO62 or HG1 2AB.</span>
+              </div>
+              <div class="field">
+                <span class="label" id="helpLabel">What help is needed?</span>
+                <div class="chips" id="chips" role="group" aria-labelledby="helpLabel"></div>
+                <span class="err" id="helpErr" hidden>Choose at least one kind of help.</span>
+              </div>
+              <div class="field">
+                <span class="label" id="whenLabel">When?</span>
+                <div class="seg" role="group" aria-labelledby="whenLabel">
+                  <button type="button" id="whenAsap" aria-pressed="true">As soon as possible</button>
+                  <button type="button" id="whenLater" aria-pressed="false">Choose a time</button>
+                </div>
+                <div class="when-row" id="whenFields" hidden>
+                  <input class="input" type="date" id="date" aria-label="Date">
+                  <input class="input" type="time" id="time" value="09:00" step="900" aria-label="Start time">
+                </div>
+              </div>
+              <div class="hours">
+                <span class="label" style="font-weight:700">How long?</span>
+                <div class="stepper">
+                  <button type="button" id="hrsDown" aria-label="Fewer hours">−</button>
+                  <output id="hrs" aria-live="polite">2 hrs</output>
+                  <button type="button" id="hrsUp" aria-label="More hours">+</button>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">See carers near me</button>
+              <p class="demo-note">This is a preview. Bookings open when we launch.</p>
+            </div>
+          </form>
+
+          <div id="viewResults" hidden>
+            <div class="card-head">
+              <h3 id="resultsTitle">4 carers free</h3>
+              <span class="pill">Examples</span>
+            </div>
+            <div class="card-body">
+              <p class="results-meta" id="resultsMeta"></p>
+              <ul class="carers" id="carerList"></ul>
+              <button class="btn btn-primary btn-block" type="button" id="bookBtn">Book</button>
+              <button class="link-btn" type="button" id="backBtn">Change details</button>
+            </div>
+          </div>
+
+          <div id="viewDone" hidden>
+            <div class="card-body done">
+              <span class="done-mark" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <h4 id="doneTitle" tabindex="-1">That's how it will work</h4>
+              <dl class="summary" id="doneSummary"></dl>
+              <p style="color:var(--muted)">When we launch, you'll get a text when your carer is on the way, and notes from every visit for you and anyone you add.</p>
+              <a class="btn btn-primary btn-block" href="#register">Register interest</a>
+              <button class="link-btn" type="button" id="againBtn">Try another booking</button>
+              <p class="demo-note">This was a preview. Nothing was booked or charged.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="az">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Services</span>
+        <h2>The A to Z of care</h2>
+        <p>Everything a carer will be able to help with, from a half-hour check-in to someone living in. Tap a service to add it to the preview booking.</p>
+      </div>
+      <div class="az">
+        <ul class="az-list" id="azList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tight" id="yorkshire">
+    <div class="wrap ny-grid">
+      <div class="ny-art">
+        <img src="img/kitchen-tea.webp" width="1100" height="1375" loading="lazy" alt="Illustration of a carer and an older man laughing over a pot of tea in a cottage kitchen, with heather moors outside the window.">
+      </div>
+      <div class="ny-copy">
+        <span class="eyebrow">Starting in North Yorkshire</span>
+        <h2 style="font-size:var(--step-3);font-weight:850;font-stretch:115%;line-height:1.02;letter-spacing:-.02em">Care for the Dales, the Moors, the coast and everywhere in between</h2>
+        <p>North Yorkshire is England's biggest county. In the villages, the nearest care agency can be a long drive away, and families often wait weeks for help. We're building A2Z Cares so people can book carers who live close by.</p>
+        <ul class="towns" aria-label="North Yorkshire towns and villages, A to Y">
+          <li><b>A</b>Aysgarth</li><li><b>B</b>Bedale</li><li><b>C</b>Catterick</li><li><b>D</b>Danby</li><li><b>E</b>Easingwold</li><li><b>F</b>Filey</li><li><b>G</b>Grassington</li><li><b>H</b>Harrogate</li><li><b>I</b>Ingleton</li><li><b>K</b>Knaresborough</li><li><b>L</b>Leyburn</li><li><b>M</b>Malton</li><li><b>N</b>Northallerton</li><li><b>O</b>Osmotherley</li><li><b>P</b>Pickering</li><li><b>R</b>Ripon</li><li><b>S</b>Scarborough</li><li><b>T</b>Thirsk</li><li><b>U</b>Ugthorpe</li><li><b>W</b>Whitby</li><li><b>Y</b>York</li>
+        </ul>
+        <p class="towns-note">No J, Q, V, X or Z in our county just yet. Tell us where you are, and we'll start where families need us most.</p>
+        <div><a class="btn btn-primary" href="#register">Register interest</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="wrap how-grid">
+      <div>
+        <div class="section-head">
+          <span class="eyebrow">Your first booking</span>
+          <h2>From first tap to front door</h2>
+        </div>
+        <ol class="steps">
+          <li><span class="step-n">1</span><div><h3>Tell us what you need</h3><p>Your postcode, the help you want and when you want it. It will take about a minute, whether you're booking for yourself or for someone you love.</p></div></li>
+          <li><span class="step-n">2</span><div><h3>Choose your carer</h3><p>See who is free near you, with reviews from other families, the checks they've passed and their hourly rate. Book the same carer again whenever you like.</p></div></li>
+          <li><span class="step-n">3</span><div><h3>Stay in the loop</h3><p>You'll get a text when your carer is on the way, and notes after every visit, so the whole family knows how Mum is doing.</p></div></li>
+        </ol>
+      </div>
+
+      <aside class="notes" aria-label="Example visit notes">
+        <div class="notes-head">
+          <strong>Visit notes · Tue 10 Nov</strong>
+          <span class="pill">Example</span>
+        </div>
+        <ol class="timeline">
+          <li><time>9:02am</time><div class="t-body">Amara arrived</div></li>
+          <li><time>9:10am</time><div class="t-body">Breakfast: porridge with banana, cup of tea</div></li>
+          <li><time>9:25am</time><div class="t-body">Morning tablets taken (prompted)</div></li>
+          <li><time>9:40am</time><div class="t-body">Short walk to the post box and back</div></li>
+          <li><time>10:00am</time><div class="t-body">Amara left
+            <p class="note">Joyce was chatty today and asked after the grandchildren. Fridge is low on milk, so I've added it to the shopping list.</p></div></li>
+        </ol>
+        <div class="notes-foot">
+          <span class="faces" aria-hidden="true"><span>Y</span><span>T</span><span>B</span></span>
+          Seen by you, Tunde and Auntie Bisi
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block tight" id="safety">
+    <div class="wrap trust-grid">
+      <div class="passport" aria-label="Example carer passport">
+        <div class="passport-top">
+          <span class="avatar" aria-hidden="true">AO</span>
+          <div><small>Carer passport · example</small><b>Amara Okafor</b></div>
+        </div>
+        <dl>
+          <div><dt>Enhanced DBS</dt><dd><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Clear<small>Checked 14 Oct 2026</small></span></dd></div>
+          <div><dt>Right to work</dt><dd><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Verified</dd></div>
+          <div><dt>References</dt><dd><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>2 of 2</dd></div>
+          <div><dt>Training</dt><dd><span>Care Certificate<small>Dementia awareness, Level 2</small></span></dd></div>
+          <div><dt>First aid</dt><dd><span>Valid<small>Until Mar 2028</small></span></dd></div>
+        </dl>
+      </div>
+      <div>
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow">Safety</span>
+          <h2>Every carer checked before they can be booked</h2>
+          <p>Each carer will have a passport you can read before you book. If a check runs out, they come off the app until it's renewed.</p>
+        </div>
+        <ul class="check-list">
+          <li><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Enhanced DBS check</b><span>The highest level of criminal record check for working with adults.</span></div></li>
+          <li><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Interview and references</b><span>An interview with our team and two references, one from a care role.</span></div></li>
+          <li><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Training on record</b><span>The Care Certificate or equivalent, plus any specialist courses, shown on their profile.</span></div></li>
+          <li><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Reviews after every visit</b><span>Families rate each visit, so standards stay high.</span></div></li>
+        </ul>
+        <div class="cqc">
+          <b>Where we are with the CQC</b>
+          A2Z Cares isn't registered with the Care Quality Commission yet. We won't provide any care until we are.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="carers">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">For carers</span>
+        <h2>Care for people near you, on your own hours.</h2>
+        <p>We're looking for carers across North Yorkshire to join us before launch. Set your availability, take visits close to home and spend less time on the road.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Choose which visits you accept</li>
+          <li><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Work in your own town or village</li>
+          <li><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Training to add new skills</li>
+        </ul>
+        <a class="btn btn-yellow" href="#register" data-role="carer">Register as a carer</a>
+      </div>
+      <div class="band-art">
+        <img src="img/moors-car.webp" width="1600" height="1067" loading="lazy" alt="Illustration of a small yellow car on a winding lane across purple heather moors towards a stone village.">
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Questions</span>
+        <h2>Before we launch</h2>
+      </div>
+      <div class="faq">
+        <details><summary>When are you launching?</summary><p>We're getting ready now. Register your interest and you'll be among the first to hear our launch date and which towns we're starting in.</p></details>
+        <details><summary>Are you registered with the CQC?</summary><p>Not yet. Home care in England has to be registered with the Care Quality Commission, and we won't provide any care until we are. Until then, this site is here so families and carers can register their interest.</p></details>
+        <details><summary>Which areas will you cover?</summary><p>We're starting in North Yorkshire, including York, Harrogate, Scarborough and the towns and villages in between. Where we go first depends on where people need us, so please tell us your town when you register.</p></details>
+        <details><summary>How much will it cost?</summary><p>You'll always see the full price before you book, with no contract and no joining fee. We'll publish our prices before we launch.</p></details>
+        <details><summary>Can I book for my mum or dad if I live far away?</summary><p>Yes. That's one of the main reasons we're building A2Z Cares. You'll be able to book from anywhere and add family members so they can see visit notes too.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="closer">
+    <div class="wrap">
+      <h2>Coming soon to North Yorkshire.</h2>
+      <a class="btn" href="#register">Register interest</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="A2Z Cares home">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 0H54A10 10 0 0 1 64 10V54A10 10 0 0 1 54 64H22A22 22 0 0 1 0 42V10A10 10 0 0 1 10 0Z" fill="#FFD23F"/><path d="M19.5 24.5C19.5 16.5 25.6 11 33 11C40.4 11 45.5 16 45.5 22.6C45.5 28.4 42.4 31.6 37.6 35.4L21 49.5H40.5" fill="none" stroke="#0F1229" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19.5" cy="24.5" r="4.6" fill="#FFD23F" stroke="#0F1229" stroke-width="3.2"/><circle cx="44.5" cy="49.5" r="6.2" fill="#2840D8"/><circle cx="44.5" cy="49.5" r="2.2" fill="#FFFFFF"/></svg>
+      <span class="logo-word"><span class="logo-a2z">A<b>2</b>Z</span><span class="logo-cares">Cares</span></span>
+    </a>
+    <nav aria-label="Footer">
+      <a href="#preview">How it will work</a>
+      <a href="#az">Services</a>
+      <a href="#yorkshire">North Yorkshire</a>
+      <a href="#carers">For carers</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <small>© 2026 A2Z Cares · a2zcares.co.uk</small>
+  </div>
+</footer>
+
+<span class="sr-only" id="announce" aria-live="polite"></span>
+
+<script>
+(function () {
+  "use strict";
+  /* Where sign-ups are sent. Leave empty while the site is a preview. */
+  var WAITLIST_ENDPOINT = "";
+
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function scrollToEl(node) { node.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" }); }
+  function announce(msg) { var a = $("announce"); a.textContent = ""; setTimeout(function () { a.textContent = msg; }, 30); }
+
+  /* ---------- Register interest ---------- */
+  var role = "care";
+  function setRole(r) {
+    role = r;
+    $("roleCare").setAttribute("aria-pressed", r === "care" ? "true" : "false");
+    $("roleCarer").setAttribute("aria-pressed", r === "carer" ? "true" : "false");
+    $("regBtn").textContent = r === "carer" ? "Register as a carer" : "Register interest";
+  }
+  $("roleCare").addEventListener("click", function () { setRole("care"); });
+  $("roleCarer").addEventListener("click", function () { setRole("carer"); });
+  document.querySelectorAll('[data-role="carer"]').forEach(function (a) {
+    a.addEventListener("click", function () { setRole("carer"); setTimeout(function () { $("regEmail").focus({ preventScroll: true }); }, 400); });
+  });
+
+  $("register").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = $("regEmail").value.trim(), area = $("regArea").value.trim(), err = $("regErr");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { err.textContent = "Enter your email address, like name@example.com."; err.hidden = false; $("regEmail").focus(); return; }
+    if (!area) { err.textContent = "Tell us your town or postcode so we know where you are."; err.hidden = false; $("regArea").focus(); return; }
+    err.hidden = true;
+    var done = function (saved) {
+      $("regFields").hidden = true; $("regDone").hidden = false;
+      $("regTitle").hidden = true;
+      $("regDoneTitle").textContent = saved ? "You're on the list" : "Thanks for trying the form";
+      $("regDoneText").textContent = saved
+        ? (role === "carer" ? "We'll be in touch about joining A2Z Cares as a carer in " + area + "." : "We'll email you when A2Z Cares is ready in " + area + ".")
+        : "This is a preview of the site, so your details weren't saved. Sign-ups open soon.";
+    };
+    if (!WAITLIST_ENDPOINT) { done(false); return; }
+    $("regBtn").disabled = true; $("regBtn").textContent = "Sending…";
+    fetch(WAITLIST_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({ email: email, area: area, role: role === "carer" ? "Carer" : "Looking for care" }) })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); done(true); })
+      .catch(function () {
+        $("regBtn").disabled = false; setRole(role);
+        err.textContent = "That didn't send. Check your connection and try again."; err.hidden = false;
+      });
+  });
+
+  /* ---------- Data ---------- */
+  var AZ = [
+    ["A", "Appointments & escorts", "Someone to go with you to the GP or hospital."],
+    ["B", "Bathing & personal care", "Washing, dressing and help in the bathroom, done with dignity.", "Personal care"],
+    ["C", "Companionship", "Conversation, a cup of tea, a walk round the village."],
+    ["D", "Dementia support", "Carers trained to keep routines calm and familiar."],
+    ["E", "Errands & shopping", "Prescriptions, groceries, the post office."],
+    ["F", "Falls prevention", "A safer home and a steady arm on the stairs."],
+    ["G", "Getting up & going to bed", "Morning and evening calls at the times you choose."],
+    ["H", "Hospital discharge", "Support for the first days back home."],
+    ["I", "Incontinence care", "Discreet, practical help, day or night."],
+    ["J", "Joining in", "Getting to clubs, church, day centres and friends."],
+    ["K", "Kitchen & meals", "Cooking proper meals and keeping the fridge stocked.", "Meals"],
+    ["L", "Live-in care", "A carer who lives with you, so you can stay at home."],
+    ["M", "Medication prompts", "Reminders and checks so doses aren't missed."],
+    ["N", "Night sitting", "Someone awake and close by through the night."],
+    ["O", "Outings", "Fresh air, the market, a trip to the seaside."],
+    ["P", "Palliative care", "Gentle support at the end of life, for the whole family."],
+    ["Q", "Quick check-ins", "A 30-minute visit to make sure all is well."],
+    ["R", "Respite for family", "Time off for the people who usually do the caring."],
+    ["S", "Stroke recovery", "Help with exercises, getting about and confidence."],
+    ["T", "Tech help", "Video calls with family and help with the phone."],
+    ["U", "Urgent cover", "Same-day carers when plans fall through."],
+    ["V", "Visual impairment", "Reading post, labelling, getting around safely."],
+    ["W", "Washing & laundry", "Clean clothes, fresh bedding, a tidy home."],
+    ["X", "X-ray & scan escorts", "Company and a lift to tests and scans."],
+    ["Y", "Young adults", "Support for 18 to 25s living with a disability."],
+    ["Z", "Zimmer & mobility", "Help moving safely with frames and walking aids."]
+  ];
+  var CHIPS = ["Companionship", "Personal care", "Meals", "Medication prompts", "Dementia support", "Night sitting"];
+  var selected = { "Companionship": true, "Meals": true };
+  var CARERS = [
+    { name: "Amara", last: "O.", init: "AO", rating: "4.9", visits: 212, rate: 24, mins: 25,
+      tag: "Dementia trained · 6 years' experience",
+      skills: ["Dementia support", "Personal care", "Medication prompts", "Getting up & going to bed", "Hospital discharge", "Companionship"],
+      x: "57%", y: "30%", mx: "26%", my: "30%" },
+    { name: "Tomasz", last: "N.", init: "TN", rating: "4.8", visits: 148, rate: 22, mins: 40,
+      tag: "Drives · knows the Ryedale lanes",
+      skills: ["Companionship", "Meals", "Errands & shopping", "Appointments & escorts", "Outings", "X-ray & scan escorts"],
+      x: "84%", y: "27%", mx: "80%", my: "26%" },
+    { name: "Grace", last: "M.", init: "GM", rating: "5.0", visits: 89, rate: 26, mins: 55,
+      tag: "Former NHS healthcare assistant",
+      skills: ["Personal care", "Night sitting", "Palliative care", "Incontinence care", "Stroke recovery", "Hospital discharge"],
+      x: "81%", y: "72%", mx: "76%", my: "76%" },
+    { name: "Priya", last: "S.", init: "PS", rating: "4.9", visits: 301, rate: 23, mins: 35,
+      tag: "Speaks Gujarati and Hindi",
+      skills: ["Companionship", "Meals", "Medication prompts", "Tech help", "Visual impairment", "Quick check-ins"],
+      x: "55%", y: "70%", mx: "22%", my: "72%" }
+  ];
+  var state = { when: "asap", hours: 2, chosen: 0, ordered: CARERS.map(function (c) { return { c: c, match: 0 }; }) };
+
+  var CHECK = '<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function fmtTime(d) { var h = d.getHours(), m = d.getMinutes(); var ap = h >= 12 ? "pm" : "am"; h = h % 12 || 12; return h + ":" + String(m).padStart(2, "0") + ap; }
+  function fmtDay(d) { return d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" }); }
+  function hrsLabel(h) { return h + (h === 1 ? " hr" : " hrs"); }
+  function listJoin(a) { if (a.length < 2) return a.join(""); return a.slice(0, -1).join(", ") + " and " + a[a.length - 1]; }
+  function selectedList() { return Object.keys(selected).filter(function (k) { return selected[k]; }); }
+
+  /* ---------- Chips ---------- */
+  function renderChips() {
+    var wrap = $("chips"); wrap.innerHTML = "";
+    CHIPS.forEach(function (name) {
+      var b = el("button", "chip"); b.type = "button";
+      b.setAttribute("aria-pressed", selected[name] ? "true" : "false");
+      b.innerHTML = CHECK; b.appendChild(document.createTextNode(name));
+      b.addEventListener("click", function () {
+        selected[name] = !selected[name];
+        b.setAttribute("aria-pressed", selected[name] ? "true" : "false");
+        if (selectedList().length) $("helpErr").hidden = true;
+        syncAz();
+      });
+      wrap.appendChild(b);
+    });
+  }
+
+  /* ---------- A–Z ---------- */
+  function renderAz() {
+    var list = $("azList");
+    AZ.forEach(function (row) {
+      var li = el("li", "az-item");
+      var b = el("button", "az-btn"); b.type = "button";
+      b.dataset.service = row[3] || row[1];
+      b.innerHTML = '<span class="az-letter" aria-hidden="true">' + row[0] + '</span><span><span class="az-name"></span><span class="az-desc"></span><span class="az-add"></span></span>';
+      b.querySelector(".az-name").textContent = row[1];
+      b.querySelector(".az-desc").textContent = row[2];
+      b.setAttribute("aria-label", row[0] + ": " + row[1] + ". " + row[2] + " Add to the preview booking.");
+      b.addEventListener("click", function () { addService(b.dataset.service, row[1]); });
+      li.appendChild(b); list.appendChild(li);
+    });
+    syncAz();
+  }
+  function syncAz() {
+    document.querySelectorAll(".az-btn").forEach(function (b) {
+      var on = !!selected[b.dataset.service];
+      b.classList.toggle("added", on);
+      b.querySelector(".az-add").textContent = on ? "Added to booking ✓" : "Add to booking →";
+    });
+  }
+  function addService(service, label) {
+    if (CHIPS.indexOf(service) === -1) CHIPS.push(service);
+    selected[service] = true;
+    renderChips(); syncAz();
+    $("helpErr").hidden = true;
+    show("form");
+    scrollToEl($("book"));
+    announce(label + " added to the preview booking.");
+  }
+
+  /* ---------- Booking preview ---------- */
+  function setWhen(w) {
+    state.when = w;
+    $("whenAsap").setAttribute("aria-pressed", w === "asap" ? "true" : "false");
+    $("whenLater").setAttribute("aria-pressed", w === "later" ? "true" : "false");
+    $("whenFields").hidden = w !== "later";
+  }
+  function setHours(h) { state.hours = Math.max(1, Math.min(12, h)); $("hrs").textContent = hrsLabel(state.hours); }
+  var tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() + 1);
+  $("date").value = tomorrow.getFullYear() + "-" + String(tomorrow.getMonth() + 1).padStart(2, "0") + "-" + String(tomorrow.getDate()).padStart(2, "0");
+  $("date").min = new Date().toISOString().slice(0, 10);
+  $("whenAsap").addEventListener("click", function () { setWhen("asap"); });
+  $("whenLater").addEventListener("click", function () { setWhen("later"); });
+  $("hrsDown").addEventListener("click", function () { setHours(state.hours - 1); });
+  $("hrsUp").addEventListener("click", function () { setHours(state.hours + 1); });
+
+  var PC = /^[A-Z]{1,2}\d[A-Z\d]?(\s*\d[A-Z]{2})?$/i;
+  function cleanPc(v) { v = v.trim().toUpperCase().replace(/\s+/g, ""); return v.length > 4 ? v.slice(0, -3) + " " + v.slice(-3) : v; }
+
+  $("viewForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var pc = $("postcode").value, ok = true;
+    if (!PC.test(pc.trim())) { $("pcErr").hidden = false; $("postcode").setAttribute("aria-invalid", "true"); ok = false; }
+    else { $("pcErr").hidden = true; $("postcode").removeAttribute("aria-invalid"); $("postcode").value = cleanPc(pc); }
+    if (!selectedList().length) { $("helpErr").hidden = false; ok = false; }
+    if (!ok) { (PC.test(pc.trim()) ? $("chips").querySelector("button") : $("postcode")).focus(); return; }
+    buildResults();
+    show("results");
+  });
+
+  function startFor(c) {
+    if (state.when === "asap") {
+      var d = new Date(Date.now() + c.mins * 60000);
+      d.setMinutes(Math.ceil(d.getMinutes() / 5) * 5, 0, 0);
+      return { date: d, label: "Could be with you by " + fmtTime(d) };
+    }
+    var parts = ($("time").value || "09:00").split(":");
+    var d2 = new Date(($("date").value || "") + "T00:00");
+    if (isNaN(d2)) d2 = new Date(tomorrow);
+    d2.setHours(+parts[0], +parts[1], 0, 0);
+    return { date: d2, label: "Free " + fmtDay(d2) + " at " + fmtTime(d2) };
+  }
+
+  function buildResults() {
+    var needs = selectedList();
+    state.ordered = CARERS.map(function (c) {
+      return { c: c, match: needs.filter(function (n) { return c.skills.indexOf(n) !== -1; }).length };
+    }).sort(function (a, b) { return b.match - a.match || a.c.mins - b.c.mins; });
+    state.chosen = 0;
+    $("resultsTitle").textContent = state.ordered.length + " carers free";
+    $("resultsMeta").textContent = $("postcode").value + " · " + hrsLabel(state.hours) + " · " + (state.when === "asap" ? "As soon as possible" : fmtDay(startFor(CARERS[0]).date));
+    var list = $("carerList"); list.innerHTML = "";
+    state.ordered.forEach(function (o, i) {
+      var c = o.c, s = startFor(c);
+      var li = el("li");
+      var b = el("button", "carer"); b.type = "button";
+      b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+      b.innerHTML =
+        '<span class="avatar" aria-hidden="true">' + c.init + '</span>' +
+        '<span style="min-width:0"><span class="carer-name"></span><span class="carer-tag"></span><span class="carer-eta"></span></span>' +
+        '<span class="carer-rate">£' + c.rate + '/hr<small>£' + (c.rate * state.hours) + ' total</small></span>';
+      var nm = b.querySelector(".carer-name");
+      nm.textContent = c.name + " " + c.last + " ";
+      nm.appendChild(el("span", "stars", "★ " + c.rating + " · " + c.visits + " visits"));
+      b.querySelector(".carer-tag").textContent = c.tag + (o.match ? " · does " + o.match + " of your " + needs.length : "");
+      b.querySelector(".carer-eta").textContent = s.label;
+      b.addEventListener("click", function () { choose(i); });
+      li.appendChild(b); list.appendChild(li);
+    });
+    renderPins(true);
+    updateBookBtn();
+  }
+  function choose(i) {
+    state.chosen = i;
+    document.querySelectorAll("#carerList .carer").forEach(function (b, j) { b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
+    document.querySelectorAll("#pins .pin").forEach(function (p) { p.setAttribute("aria-pressed", p.dataset.init === state.ordered[i].c.init ? "true" : "false"); });
+    updateBookBtn();
+  }
+  function updateBookBtn() {
+    var c = state.ordered[state.chosen].c;
+    $("bookBtn").textContent = "Book " + c.name + " for " + hrsLabel(state.hours) + " · £" + (c.rate * state.hours);
+  }
+  $("bookBtn").addEventListener("click", function () {
+    var c = state.ordered[state.chosen].c, s = startFor(c);
+    var dl = $("doneSummary"); dl.innerHTML = "";
+    [["Carer", c.name + " " + c.last],
+     ["When", (state.when === "asap" ? "Today" : fmtDay(s.date)) + ", " + fmtTime(s.date)],
+     ["Where", $("postcode").value],
+     ["Help", listJoin(selectedList())],
+     ["Total", "£" + (c.rate * state.hours)]].forEach(function (r) {
+      dl.appendChild(el("dt", null, r[0])); dl.appendChild(el("dd", null, r[1]));
+    });
+    show("done");
+    $("doneTitle").focus();
+  });
+  $("backBtn").addEventListener("click", function () { show("form"); });
+  $("againBtn").addEventListener("click", function () { show("form"); renderPins(false); });
+  function show(view) {
+    $("viewForm").hidden = view !== "form";
+    $("viewResults").hidden = view !== "results";
+    $("viewDone").hidden = view !== "done";
+  }
+
+  /* ---------- Map pins ---------- */
+  function renderPins(animate) {
+    var wrap = $("pins"); wrap.innerHTML = "";
+    var top = state.ordered[state.chosen] ? state.ordered[state.chosen].c.init : null;
+    CARERS.forEach(function (c, i) {
+      var p = el("button", "pin" + (animate ? " drop" : "")); p.type = "button";
+      p.dataset.init = c.init;
+      p.style.setProperty("--x", c.x); p.style.setProperty("--y", c.y);
+      p.style.setProperty("--mx", c.mx); p.style.setProperty("--my", c.my);
+      p.style.setProperty("--d", i);
+      p.setAttribute("aria-label", "Example carer " + c.name + " " + c.last + ", £" + c.rate + " an hour");
+      p.setAttribute("aria-pressed", animate && top === c.init ? "true" : "false");
+      p.innerHTML = "<span>" + c.init + "</span>";
+      p.addEventListener("click", function () {
+        if ($("viewResults").hidden) { scrollToEl($("book")); return; }
+        choose(state.ordered.findIndex(function (o) { return o.c.init === c.init; }));
+      });
+      wrap.appendChild(p);
+    });
+  }
+
+  /* ---------- Street map (canvas) ---------- */
+  var canvas = $("map");
+  function drawMap() {
+    var r = canvas.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(r.width * dpr); canvas.height = Math.round(r.height * dpr);
+    var ctx = canvas.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var W = r.width, H = r.height;
+    var css = getComputedStyle(document.documentElement);
+    function v(n) { return css.getPropertyValue(n).trim(); }
+    var seed = 11; function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+    ctx.fillStyle = v("--map-land"); ctx.fillRect(0, 0, W, H);
+    ctx.save(); ctx.translate(W / 2, H / 2); ctx.rotate(-0.13);
+    ctx.strokeStyle = v("--map-street"); ctx.lineCap = "round";
+    var span = Math.max(W, H) * 1.5;
+    for (var x = -span / 2; x < span / 2; x += 30 + rnd() * 26) {
+      ctx.lineWidth = rnd() > .82 ? 5 : 3;
+      ctx.beginPath(); ctx.moveTo(x, -span / 2); ctx.lineTo(x + (rnd() - .5) * 60, span / 2); ctx.stroke();
+    }
+    for (var y = -span / 2; y < span / 2; y += 26 + rnd() * 24) {
+      ctx.lineWidth = rnd() > .82 ? 5 : 3;
+      ctx.beginPath(); ctx.moveTo(-span / 2, y); ctx.lineTo(span / 2, y + (rnd() - .5) * 50); ctx.stroke();
+    }
+    ctx.restore();
+    ctx.fillStyle = v("--map-park");
+    blob(ctx, W * .70, H * .06, W * .2, H * .2);
+    blob(ctx, W * .08, H * .12, W * .14, H * .16);
+    blob(ctx, W * .40, H * .78, W * .12, H * .1);
+    ctx.strokeStyle = v("--map-water"); ctx.lineWidth = Math.max(18, H * .045); ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(-30, H * .9); ctx.bezierCurveTo(W * .3, H * .74, W * .55, H * 1.04, W + 30, H * .84); ctx.stroke();
+    var roads = [
+      [[-.05, .38], [.25, .42], [.5, .34], [.78, .42], [1.05, .36]],
+      [[.63, -.05], [.62, .3], [.6, .55], [.66, .8], [.64, 1.05]],
+      [[.12, 1.05], [.28, .7], [.42, .5], [.5, .34]],
+      [[.86, -.05], [.9, .5], [1.05, .7]]
+    ];
+    roads.forEach(function (pts) { road(ctx, pts, W, H, 12, v("--map-road-edge")); });
+    roads.forEach(function (pts) { road(ctx, pts, W, H, 8, v("--map-road")); });
+    ctx.fillStyle = v("--map-label");
+    ctx.font = '500 10px "IBM Plex Mono", ui-monospace, monospace';
+    if ("letterSpacing" in ctx) ctx.letterSpacing = "1px";
+    label(ctx, "MARKET PLACE", W * .86, H * .385, -0.21);
+    label(ctx, "MOOR LANE", W * .615, H * .62, 1.42);
+    label(ctx, "CHURCH LANE", W * .35, H * .58, -1.0);
+    label(ctx, "THE GREEN", W * .8, H * .16, 0);
+  }
+  function blob(ctx, x, y, w, h) { ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(x, y, w, h, Math.min(w, h) * .35); else ctx.rect(x, y, w, h); ctx.fill(); }
+  function road(ctx, pts, W, H, width, color) {
+    ctx.strokeStyle = color; ctx.lineWidth = width; ctx.lineCap = "round"; ctx.lineJoin = "round";
+    ctx.beginPath();
+    var p = pts.map(function (q) { return [q[0] * W, q[1] * H]; });
+    ctx.moveTo(p[0][0], p[0][1]);
+    for (var i = 1; i < p.length - 1; i++) { ctx.quadraticCurveTo(p[i][0], p[i][1], (p[i][0] + p[i + 1][0]) / 2, (p[i][1] + p[i + 1][1]) / 2); }
+    ctx.lineTo(p[p.length - 1][0], p[p.length - 1][1]);
+    ctx.stroke();
+  }
+  function label(ctx, text, x, y, angle) { ctx.save(); ctx.translate(x, y); ctx.rotate(angle); ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(text, 0, -12); ctx.restore(); }
+  var raf = 0;
+  function redraw() { cancelAnimationFrame(raf); raf = requestAnimationFrame(drawMap); }
+  if ("ResizeObserver" in window) new ResizeObserver(redraw).observe(canvas); else window.addEventListener("resize", redraw);
+  if (window.matchMedia) { var mq = window.matchMedia("(prefers-color-scheme: dark)"); if (mq.addEventListener) mq.addEventListener("change", redraw); }
+  new MutationObserver(redraw).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(redraw);
+
+  /* ---------- Init ---------- */
+  renderChips();
+  renderAz();
+  renderPins(false);
+  setHours(2);
+  drawMap();
+})();
+</script>
+
+</body>
+</html>
